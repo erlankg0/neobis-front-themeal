@@ -1,18 +1,29 @@
 import './App.module.css'
-import {BrowserRouter} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Header from "../../components/header/header.tsx";
 import Meal from "../Meal/Meal.tsx";
 import styles from './App.module.css'
-import SearchMeal from "../../components/search/search.tsx";
+import DetailMeal from "../DetailMeal/DetailMeal.tsx";
 
 const App = () => {
     return (
         <BrowserRouter>
             <div className={styles.wrapper}>
                 <Header/>
-                <Meal text={'The Meal'} title={'Text'} paragraph={'text'}
-                      imageUrl={'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png'}/>
-                <SearchMeal/>
+                <Routes>
+                    <Route
+                        path={'/'}
+                        element={
+                            <Meal
+                                text={'The Meal'}
+                                title={'Text'}
+                                paragraph={'text'}
+                                imageUrl={'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png'}
+                            />
+                        }/>
+                    <Route path={'/detail'} element={<DetailMeal/>}/>
+                </Routes>
+
             </div>
         </BrowserRouter>
     )

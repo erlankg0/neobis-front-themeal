@@ -1,0 +1,28 @@
+.ingredients{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0 auto;
+    width: 40%;
+}
+.ingredient:before{
+    content: '';
+    width: .5rem;
+    align-self: center;
+    border-bottom: solid 1px black;
+}
+
+.ingredient{
+    display: flex;
+    gap: 1rem;
+}
+
+.title{
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.count{
+    font-size: 1.8rem;
+    font-weight: 900;
+}
