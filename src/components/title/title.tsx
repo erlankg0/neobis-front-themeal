@@ -1,8 +1,13 @@
 import styles from './title.module.css'
+import React from "react";
 
-const Title = () => {
+interface ITitle {
+    value: string
+}
+
+const Title: React.FC<ITitle> = ({value}) => {
     return (
-        <h2 className={styles.title}>Meal of the Day</h2>
+        <h2 className={styles.title}>{value}</h2>
     )
 }
 
