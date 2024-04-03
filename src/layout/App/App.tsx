@@ -22,9 +22,7 @@ const App = () => {
 
         getRandom(); // Invoking async function directly
     }, []); // Empty dependency array
-    if (randomMeal){
-        console.log(randomMeal.data.meals[0].strMeal)
-    }
+
     return (
         <BrowserRouter>
             {randomMeal && <div className={styles.wrapper}>

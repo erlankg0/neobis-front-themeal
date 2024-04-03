@@ -9,11 +9,14 @@ import {useNavigate} from "react-router-dom";
 const SearchMeal = () => {
     const navigate = useNavigate();// hook для переадресации
     const handleOnSearch: SearchProps['onSearch'] = (value) => {
-        searchMeal(value).then(r => {
-            if (r.data) {
-                navigate(`/detail/${r.data.meals[0].idMeal}`)
-            }
-        })
+        if(value.trim().length > 1){
+            searchMeal(value).then(r => {
+                if (r.data) {
+                    navigate(`/detail/${r.data.meals[0].idMeal}`)
+                }
+            }).catch(()=> alert('Ошибка нету такого Блюда'))
+        }
+
 
     };
 

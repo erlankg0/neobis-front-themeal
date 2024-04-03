@@ -26,3 +26,9 @@
     font-size: 1.8rem;
     font-weight: 900;
 }
+
+@media (max-width: 912px) {
+    .ingredients{
+        width: 90%;
+    }
+}

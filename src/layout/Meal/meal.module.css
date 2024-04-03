@@ -1,12 +1,20 @@
-.content{
+.content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     align-items: center;
     justify-items: center;
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+}
+
+@media (max-width: 435px ) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
 }
