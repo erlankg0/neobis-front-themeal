@@ -36,6 +36,7 @@ const InfoMeal = () => {
             getMeal(id)
         }
         if (meal?.data) {
+            // ТУТ ВОПРОСЫ К API И К BACKEND
             const ingredients = [
                 {
                     ingredient: meal?.data.meals[0]?.strIngredient1,
