@@ -9,14 +9,15 @@ interface IMeal {
     text: string,
     paragraph: string,
     imageUrl: string,
+    id: string,
 
 }
 
-const Meal: React.FC<IMeal> = ({title, text, paragraph, imageUrl}) => {
+const Meal: React.FC<IMeal> = ({title, text, paragraph, imageUrl, id}) => {
     return (
         <div className={styles.container}>
             <div className={styles.content}>
-                <MealText title={title} text={text} paragraph={paragraph}/>
+                <MealText title={title} text={text} paragraph={paragraph} url={id}/>
                 <MealImage url={imageUrl}/>
             </div>
             <SearchMeal/>

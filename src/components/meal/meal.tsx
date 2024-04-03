@@ -6,14 +6,15 @@ import styles from './meal.module.css';
 interface IMealText {
     title: string,
     text: string,
-    paragraph: string
+    paragraph: string,
+    url: string
 }
 
-const MealText: React.FC<IMealText> = ({title, text, paragraph}) => {
+const MealText: React.FC<IMealText> = ({title, text, paragraph, url}) => {
     return (
         <div className={styles.content}>
             <Title value={title}/>
-            <NavLink className={styles.navLink} to={'/'}>{text}</NavLink>
+            <NavLink className={styles.navLink} to={`/detail/${url}`}>{text}</NavLink>
             <p className={styles.paragraph}>{paragraph}</p>
         </div>
     )

@@ -11,6 +11,8 @@
     flex-direction: column;
     gap: 5rem;
 
+    padding: 3rem 0;
+
 }
 
 .info{
@@ -52,4 +54,11 @@
     line-height: 3rem;
     width: 70%;
     margin: 0 auto;
+}
+
+.button{
+    max-width: 25rem;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
 }
