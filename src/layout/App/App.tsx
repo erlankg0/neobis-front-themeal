@@ -1,11 +1,10 @@
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {HashRouter, Route, Routes} from "react-router-dom";
 import Header from "../../components/header/header.tsx";
 import Meal from "../Meal/Meal.tsx";
 import styles from './App.module.css';
 import DetailMeal from "../DetailMeal/DetailMeal.tsx";
 import {useEffect, useState} from "react";
-import {getRandomMeal} from "../../utils/network.ts";
-import {IMealResponse} from "../../utils/network.ts";
+import {getRandomMeal, IMealResponse} from "../../utils/network.ts";
 
 const App = () => {
     const [randomMeal, setRandomMeal] = useState<IMealResponse>();
@@ -24,7 +23,7 @@ const App = () => {
     }, []); // Empty dependency array
 
     return (
-        <BrowserRouter>
+        <HashRouter>
             {randomMeal && <div className={styles.wrapper}>
                 <Header/>
                 <Routes>
@@ -43,7 +42,7 @@ const App = () => {
                     <Route path={'/detail/:id'} element={<DetailMeal />} />
                 </Routes>
             </div>}
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
