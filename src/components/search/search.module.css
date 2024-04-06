@@ -1,5 +1,19 @@
-.input{
-    max-width: 50rem;
+.content{
+    max-width: 70rem;
     align-self: center;
-    justify-self: center;
+    text-align: center;
+    width: 50rem;
+}
+
+.input .ant-input{
+    padding: 0.5rem;
+    background-color: #dedede;
+    border-radius: 0;
+}
+
+.button{
+    background-color: #d49726;
+    border-color: #d49726;
+    border-radius: 0;
+    color: black;
 }
