@@ -1,8 +1,14 @@
 .content{
-    max-width: 70rem;
     align-self: center;
     text-align: center;
+    max-width: 70rem;
     width: 50rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .input .ant-input{

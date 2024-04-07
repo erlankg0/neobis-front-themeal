@@ -69,10 +69,13 @@ const getByIdMeal = (id: string): Promise<IMealResponse> => {
     return instance.get(`/lookup.php?i=${id}`)
 }
 
-const searchMeal = (search: string): Promise<IMealResponse>=>{
+const searchMeal = (search: string): Promise<IMealResponse> => {
     return instance.get(`/search.php?s=${search}`)
 }
 
+const searchMealList = (letter: string): Promise<IMealResponse> => {
+    return instance.get(`/search.php?s=${letter}`)
+}
 
-export {getByIdMeal, getRandomMeal, searchMeal}
-export type {IMealResponse}
+export {getByIdMeal, getRandomMeal, searchMeal, searchMealList}
+export type {IMealResponse, IMeal}
